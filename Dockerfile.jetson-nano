@@ -53,7 +53,7 @@ WORKDIR /
 
 # Download and build Darknet
 RUN \
-  git clone --depth 1 -b odc https://github.com/opendatacam/darknet
+  git clone --depth 1 -b odc https://github.com/zanmange/darknet
 
 WORKDIR /darknet
   
@@ -71,7 +71,7 @@ RUN \
   apt-get install -y nodejs
 
 RUN \
-  git clone --depth 1 https://github.com/opendatacam/opendatacam.git  /var/local/opendatacam
+  git clone --depth 1 https://github.com/zanmange/TrafficDataSys.git  /var/local/opendatacam
 
 WORKDIR /var/local/opendatacam
 
