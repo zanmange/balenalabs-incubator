@@ -1,6 +1,6 @@
 FROM resinplayground/jetson-nano-cuda-cudnn-opencv:v0.2-slim
 
-#OpenDataCam 3.0.0
+#OpenDataCam 3.0.1
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y jq wget
 
 WORKDIR /
 
-RUN git clone --depth 1 -b odc https://github.com/opendatacam/darknet
+RUN git clone --depth 1 -b odc https://github.com/zanmange/darknet
 
 WORKDIR /darknet
 COPY ./Makefile.jetson-nano ./Makefile
@@ -24,7 +24,7 @@ RUN wget https://pjreddie.com/media/files/yolov3-tiny.weights > /dev/null 2>&1
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     apt-get install -y nodejs
 
-RUN git clone --depth 1 -b v3.0.0 https://github.com/opendatacam/opendatacam /var/local/opendatacam
+RUN git clone --depth 1 -b v3.0.1 https://github.com/zanmange/TrafficDataSys /var/local/opendatacam
 
 WORKDIR /var/local/opendatacam
 
