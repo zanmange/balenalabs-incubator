@@ -3,7 +3,8 @@ volumes:
     db-data:
     config-data:
 services:
-  opendatacam:
+trafficdatasys:
+  image: opendatacam
     restart: always
     build: .
     privileged: true
