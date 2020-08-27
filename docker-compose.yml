@@ -1,9 +1,10 @@
-version: '2'
+version: '2.1'
 volumes:
     db-data:
     config-data:
 services:
-  opendatacam:
+trafficdatasys:
+    image: opendatacam
     restart: always
     build: .
     privileged: true
