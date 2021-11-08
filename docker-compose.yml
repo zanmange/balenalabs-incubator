@@ -22,13 +22,3 @@ trafficdatasys:
       - "27017:27017"
     volumes:
       - 'db-data:/data/db'
-  node:
-    image: "balenalib/jetson-nano-debian-node:latest"
-    user: "node"
-    working_dir: /home/node/app
-    environment:
-      - NODE_ENV=production
-    volumes:
-      - ./:/home/node/app
-    expose:
-      - "8181"
